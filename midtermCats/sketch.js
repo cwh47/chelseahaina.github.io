@@ -14,7 +14,7 @@ function setup() {
 
 function keyPressed() {
   var r = floor(random(0, pusheens.length));
-  var b = new Bubble(mouseX, mouseY, pusheens[r]);
+  var b = new Bubble(random(width), random(height), pusheens[r]);
   bubbles.push(b);
   meow.play();
 }
