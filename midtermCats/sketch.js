@@ -5,7 +5,7 @@ function preload() {
   for (var i = 0; i < 4; i++) {
     pusheens[i] = loadImage("images/pusheen" + i + ".png");
   }
-  meow = loadSound('sounds/meow4.mp3');
+  meow = loadSound('sounds/meow3.mp3');
 }
 
 function setup() {
