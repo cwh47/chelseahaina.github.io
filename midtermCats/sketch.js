@@ -1,76 +1,29 @@
-var img;
-var img2;
-var img3;
-var img4;
-var img5;
-var meow;
-var meow2;
-var meowmix;
-
-var playedSound = false;
-var imgShown = false;
-//var playedMeowMix = false;
-
-var currentKey = 0;
-var slider;
-var button;
+var bubbles = [];
+var pusheens = [];
 
 function preload() {
+  for (var i = 0; i < 4; i++) {
+    pusheens[i] = loadImage("images/pusheen" + i + ".png");
+  }
   meow = loadSound('sounds/meow4.mp3');
-  meowmix = loadSound('sounds/meowmix.mp3');
-  img = loadImage("images/cat5.png");
-  img2 = loadImage("images/cat1.png");
-  img3 = loadImage("images/cat2.png");
-  img4 = loadImage("images/cat6.png");
-  img5 = loadImage("images/cat3.png");
 }
-
 
 function setup() {
-  createCanvas(650, 650);
-  textFont("Montserrat");
-  meow.setVolume(1);
-  slider = createSlider(0, 255, 100);
-  slider.position(400, 20);
-  button = createButton("Meow?");
-  button.position(550, 20);
-  button.mousePressed(meowMix);
-
+  cnv = createCanvas(800, 800);
 }
 
-function meowMix() {
-  /*meowmix.play();
-  playedMeowMix = true;
-  if (button.mousePressed && playedMeowMix) {
-    meow.stop();*/
+function keyPressed() {
+  var r = floor(random(0, pusheens.length));
+  var b = new Bubble(mouseX, mouseY, pusheens[r]);
+  bubbles.push(b);
+  meow.play();
 }
 
 function draw() {
-  background(255);
+  background(240, 248, 255);
 
-  var gray = slider.value();
-  background(gray);
-
-  //cat meows
-  if (keyIsPressed && !playedSound) {
-    currentKey = int(map(keyCode, 97, 111, 0, 25));
-    console.log(currentKey);
-    playedSound = true;
-    meow.play();
-  }
-
-  if (keyIsPressed) {
-    currentKey = int(map(keyCode, 97, 111, 0, 25));
-    console.log(currentKey);
-    image(img, 0, 0);
-    image(img2, 30, 50, width / 6, height / 6);
-    image(img3, 300, 110, width / 2, height / 2);
-    image(img4, 100, 400, width / 2, height / 2);
-    image(img5, 110, 375, width / 4, height / 4);
-
-
-  }
-  if (!keyIsPressed) {
-    playedSound = false;
+  for (var i = bubbles.length - 1; i >= 0; i--) {
+    bubbles[i].update();
+    bubbles[i].display();
   }
 }
