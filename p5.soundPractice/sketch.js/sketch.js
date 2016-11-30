@@ -21,13 +21,4 @@ function draw() {
     var sinValue = sin(angle) * 120;
     line(x, 0, x, height / 2 + sinValue);
   }
-  //map mouseY value from 5Hz to 200Hz for nu
-  var hertz2 = map(0, mouseY, height, 5.0, 200.0);
-  sine.freq(hertz2);
-  //draw wave to visualize nu of sound2
-  stroke(255, 255, 0);
-  for (var y = 0; y < height; y++);{
-  var angle2 = map(0, y, 0, height, TWO_PI * hertz2);
-  line(0, y, width / 2 + sinValue);
-  }
 }
