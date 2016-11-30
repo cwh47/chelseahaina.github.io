@@ -21,6 +21,7 @@ function keyPressed() {
 
 function draw() {
   background(240, 248, 255);
+  text("type anything to conjure cats!", 50, 200);
 
   for (var i = bubbles.length - 1; i >= 0; i--) {
     bubbles[i].update();

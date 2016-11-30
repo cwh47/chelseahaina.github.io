@@ -1,0 +1,246 @@
+font-family: 'Lora',
+serif;
+font-family: 'Montserrat',
+sans-serif;
+
+
+/* nav */1` 
+
+
+/* unvisited link */
+
+a:link {
+    text-decoration: none;
+}
+
+
+/* visited link */
+
+a:visited {
+    text-decoration: none;
+}
+
+
+/* mouse over link */
+
+a:hover {
+    text-decoration: none;
+    
+}
+
+
+/* selected link */
+
+a:active {
+    text-decoration: none;
+}
+
+li:hover {
+    background-color: rgb(115,175,212);
+    color: black;
+}
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: rgb(115,175,212);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: rgb(115,175,212);
+    background: #fff;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 55px;
+    font-size: 20px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+    #sidebar-wrapper {
+        width: 250px;
+    }
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+
+/* NAV STYLING END */
+
+#home-headline {
+    float: left;
+    margin: 0;
+    margin-top: 70px;
+    margin-left: 5px;
+    padding: none;
+    font-family: 'Lora', sans-serif;
+    color: white;
+}
+
+body#background {
+    background-color: azure background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: 100% auto;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    margin-left: 5px;
+    margin-top: 10
+}
+
+#logo {
+    float: left;
+    max-width: 100%;
+    max-height: 100;
+    margin-top: 10px;
+}
+
+#button {
+    float: right;
+    margin-right: 10px;
+}
+
+footer {
+    margin-top: 550px;
+    position: fixed;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+h1 {
+    font-family: 'Montserrat', "sans-serif";
+    margin-left: 0px;
+    float: left;
+    color: rgb(0, 153, 204;
+}
+
+h5 {
+    font-family: 'Montserrat', "sans-serif";
+    margin-left: 0px;
+    float: left;
+    color: rgb(0, 153, 204;
+}
+
+font {
+    font-family: 'Lora', sans-serif;
+    font-family: 'Lora', sans-serif;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 0px;
+    color: darkblue
+}
+
+li {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: darkblue
+}
+
+div.nav {
+    text-decoration: none;
+}
+
+
+/* real stuff */
+
+figure img {
+    max-width: 100%;
+}
+
+</html>
